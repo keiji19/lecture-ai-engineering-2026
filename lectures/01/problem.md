@@ -92,3 +92,8 @@ AIE_MODEL=gemini-3.5-flash uv run python -m app.ask "LoRAとは何ですか？"
 ```
 
 temperature を変えるには、`generate_content` の `config` 引数を調べてみましょう。
+`app/ask.py` では既定値を `1.0` とし、`--temperature` で実行ごとに変更できます。
+
+```bash
+uv run python -m app.ask --temperature 0.3 "LoRAとは何ですか？"
+```
